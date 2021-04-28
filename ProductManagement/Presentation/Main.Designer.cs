@@ -34,7 +34,7 @@ namespace Presentation
             this.btnSearch = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxProduct = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace Presentation
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearchBar
@@ -52,7 +52,7 @@ namespace Presentation
             this.txtSearchBar.Location = new System.Drawing.Point(184, 77);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Size = new System.Drawing.Size(642, 30);
+            this.txtSearchBar.Size = new System.Drawing.Size(642, 23);
             this.txtSearchBar.TabIndex = 0;
             // 
             // btnSearch
@@ -94,13 +94,13 @@ namespace Presentation
             this.dgvProductList.Size = new System.Drawing.Size(909, 423);
             this.dgvProductList.TabIndex = 3;
             // 
-            // pictureBox1
+            // pbxProduct
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(990, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbxProduct.Location = new System.Drawing.Point(990, 204);
+            this.pbxProduct.Name = "pbxProduct";
+            this.pbxProduct.Size = new System.Drawing.Size(232, 240);
+            this.pbxProduct.TabIndex = 4;
+            this.pbxProduct.TabStop = false;
             // 
             // btnAdd
             // 
@@ -160,7 +160,7 @@ namespace Presentation
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblProductName.Location = new System.Drawing.Point(1060, 152);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(86, 25);
+            this.lblProductName.Size = new System.Drawing.Size(64, 17);
             this.lblProductName.TabIndex = 9;
             this.lblProductName.Text = "Product";
             // 
@@ -176,18 +176,18 @@ namespace Presentation
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1257, 713);
+            this.ClientSize = new System.Drawing.Size(1263, 713);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxProduct);
             this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.btnSearch);
@@ -197,12 +197,12 @@ namespace Presentation
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1279, 769);
-            this.MinimumSize = new System.Drawing.Size(1279, 769);
+            this.MinimumSize = new System.Drawing.Size(1279, 726);
             this.Name = "Main";
             this.Text = "Product management system";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +214,7 @@ namespace Presentation
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.DataGridView dgvProductList;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxProduct;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInfo;
