@@ -1,0 +1,15 @@
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.exe
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Domain.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Business.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\bin\Debug\Domain.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.Form1.resources
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.exe
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.pdb

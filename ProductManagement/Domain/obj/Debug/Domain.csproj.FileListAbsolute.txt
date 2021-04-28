@@ -1,0 +1,9 @@
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\bin\Debug\Domain.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\bin\Debug\Domain.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\bin\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\bin\Debug\Business.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.pdb

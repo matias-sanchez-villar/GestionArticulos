@@ -1,6 +1,6 @@
-create database Producto
+create database Catalogo_DB
 go
-use Producto
+use Catalogo_DB
 go
 create table Categorias(
 	ID int not null primary key identity(1,1),
@@ -12,14 +12,14 @@ create table Marcas(
 	Nombre varchar(50) not null,
 )
 go
-Create table Productos(
+Create table Producto(
 	ID int not null primary key identity(1,1),
-	Codigo varchar(50) NULL,
+	Codigo char(4) NULL,
 	Nombre varchar(50) not null,
-	Descrepcion varchar(150) not null,
+	Descripcion varchar(150) not null,
 	IDMarca int foreign key references Marcas(ID) not null,
 	IDCartegoria int foreign key references Categorias(ID) not null,
-	URLimagen varchar(250) null,
-	Precio money not null check(Precio>0),
-	Cantidad bigint not null check(Cantidad>0),
+	URLimagen varchar(350) null,
+	Precio money not null check(Precio > 0),
+	Cantidad int null check(Cantidad > 0)
 )

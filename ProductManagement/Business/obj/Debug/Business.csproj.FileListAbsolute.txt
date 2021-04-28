@@ -1,0 +1,6 @@
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\bin\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\bin\Debug\Business.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\obj\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Business\obj\Debug\Business.pdb
