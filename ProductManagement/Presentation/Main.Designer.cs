@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.txtSearchBar = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -52,14 +52,14 @@ namespace Presentation
             this.txtSearchBar.Location = new System.Drawing.Point(184, 77);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Size = new System.Drawing.Size(647, 30);
+            this.txtSearchBar.Size = new System.Drawing.Size(642, 30);
             this.txtSearchBar.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnSearch.Location = new System.Drawing.Point(847, 77);
+            this.btnSearch.Location = new System.Drawing.Point(847, 73);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.MaximumSize = new System.Drawing.Size(100, 30);
             this.btnSearch.MinimumSize = new System.Drawing.Size(100, 30);
@@ -84,7 +84,7 @@ namespace Presentation
             // 
             // dgvProductList
             // 
-            this.dgvProductList.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dgvProductList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvProductList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Location = new System.Drawing.Point(38, 175);
@@ -106,19 +106,20 @@ namespace Presentation
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnAdd.Location = new System.Drawing.Point(111, 633);
+            this.btnAdd.Location = new System.Drawing.Point(96, 634);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(145, 45);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnUpdate.Location = new System.Drawing.Point(313, 633);
+            this.btnUpdate.Location = new System.Drawing.Point(739, 634);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(145, 45);
@@ -130,19 +131,20 @@ namespace Presentation
             // 
             this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnInfo.Location = new System.Drawing.Point(519, 633);
+            this.btnInfo.Location = new System.Drawing.Point(302, 634);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(145, 45);
             this.btnInfo.TabIndex = 7;
             this.btnInfo.Text = "More info";
             this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDelete.Location = new System.Drawing.Point(716, 633);
+            this.btnDelete.Location = new System.Drawing.Point(524, 634);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(145, 45);
@@ -153,15 +155,18 @@ namespace Presentation
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(1066, 155);
+            this.lblProductName.BackColor = System.Drawing.Color.Transparent;
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblProductName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblProductName.Location = new System.Drawing.Point(1060, 152);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(79, 25);
+            this.lblProductName.Size = new System.Drawing.Size(86, 25);
             this.lblProductName.TabIndex = 9;
             this.lblProductName.Text = "Product";
             // 
             // txtBoxDescription
             // 
-            this.txtBoxDescription.BackColor = System.Drawing.SystemColors.GrayText;
+            this.txtBoxDescription.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.txtBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDescription.Location = new System.Drawing.Point(990, 465);
             this.txtBoxDescription.Multiline = true;
@@ -169,11 +174,13 @@ namespace Presentation
             this.txtBoxDescription.Size = new System.Drawing.Size(232, 133);
             this.txtBoxDescription.TabIndex = 10;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 706);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1257, 713);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.btnDelete);
@@ -189,9 +196,9 @@ namespace Presentation
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1271, 762);
-            this.MinimumSize = new System.Drawing.Size(1271, 762);
-            this.Name = "Form1";
+            this.MaximumSize = new System.Drawing.Size(1279, 769);
+            this.MinimumSize = new System.Drawing.Size(1279, 769);
+            this.Name = "Main";
             this.Text = "Product management system";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
