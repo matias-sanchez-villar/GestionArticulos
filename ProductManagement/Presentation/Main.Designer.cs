@@ -93,6 +93,7 @@ namespace Presentation
             this.dgvProductList.RowTemplate.Height = 28;
             this.dgvProductList.Size = new System.Drawing.Size(909, 423);
             this.dgvProductList.TabIndex = 3;
+            this.dgvProductList.Click += new System.EventHandler(this.dgvProductList_Click);
             // 
             // pbxProduct
             // 
@@ -200,6 +201,7 @@ namespace Presentation
             this.MinimumSize = new System.Drawing.Size(1279, 726);
             this.Name = "Main";
             this.Text = "Product management system";
+            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
