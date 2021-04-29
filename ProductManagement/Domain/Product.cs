@@ -15,7 +15,7 @@ namespace Domain
         public Brand Brand { get; set; }
         public Category Category { get; set; }
         public string URLimage { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public int Quantity { get; set; }
 
     }

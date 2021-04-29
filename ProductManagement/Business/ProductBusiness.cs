@@ -26,7 +26,7 @@ namespace Business
                     productAux.Code = (String) access.Reader["Codigo"];
                     productAux.Name=(String) access.Reader["Nombre"];
                     productAux.Description = (String) access.Reader["Descripcion"];
-                    productAux.Price = (float) access.Reader["Precio"];
+                    productAux.Price = (decimal) access.Reader["Precio"];
                     productAux.Quantity = (int) access.Reader["Cantidad"];
                     productAux.URLimage = (String) access.Reader["URLImagen"];
                     productAux.Brand = new Brand((string)access.Reader["MarcaProducto"]);

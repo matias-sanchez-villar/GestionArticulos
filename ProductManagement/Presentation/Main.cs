@@ -31,8 +31,11 @@ namespace Presentation
                 dgvProductList.DataSource = ProductList;
 
                 dgvProductList.Columns["ID"].Visible =false;
-                dgvProductList.Columns["URLImagen"].Visible = false;
-                dgvProductList.Columns["Descripcion"].Visible = false;
+
+                /*
+                    dgvProductList.Columns["URLImagen"].Visible = false;
+                    dgvProductList.Columns["URLImagen"].Visible = false;
+                 */
 
                 reloadImg(ProductList[0].URLimage);
                 reloadName(ProductList[0].Name);
