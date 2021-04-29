@@ -23,3 +23,12 @@ Create table Producto(
 	Precio money not null check(Precio > 0),
 	Cantidad int null check(Cantidad > 0)
 )
+
+
+--Informacion contenida en la BD
+
+
+--Consultas para el proyecto
+select p.Codigo, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen from Producto p
+inner join Categorias C on c.ID = p.IDCartegoria
+inner join Marcas M on M.ID = P.IDMarca
