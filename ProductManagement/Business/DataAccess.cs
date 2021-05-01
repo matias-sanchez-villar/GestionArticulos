@@ -7,23 +7,24 @@ using System.Data.SqlClient;
 
 namespace Business
 {
-    class DataAccess
+    public class DataAccess
     {
         private SqlConnection Connection;
         private SqlCommand Command;
 
         public SqlDataReader Reader { get; set; }
 
-        /// <summary>
-        ///  Conetion BD
+        ///  BD Connections
         /// Mati  DESKTOP-K54EB4U\\SQLEXPRESS
         /// Doro LAPTOP-J10AEMSB\\SQLEXPRESS
-        /// </summary>
+
+        // 1. Constructor that initializes the connection to DB
         public DataAccess()
         {
             Connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS; Initial Catalog=Catalogo_DB; integrated security=true;");
             Command = new SqlCommand();
         }
+        // 2. Set a query to the DB
         public void setQuery(string query)
         {
             Command.CommandType = System.Data.CommandType.Text;
@@ -44,6 +45,13 @@ namespace Business
                 Reader.Close();
             }
             Connection.Close();
+        }
+        // 5. Executes action for Insert, Update and Delete
+        internal void executeAction()
+        {
+            Command.Connection = Connection;
+            Connection.Open();
+            Command.ExecuteNonQuery();
         }
 
     }

@@ -52,7 +52,7 @@ namespace Presentation
             this.txtSearchBar.Location = new System.Drawing.Point(184, 77);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Size = new System.Drawing.Size(642, 23);
+            this.txtSearchBar.Size = new System.Drawing.Size(642, 30);
             this.txtSearchBar.TabIndex = 0;
             // 
             // btnSearch
@@ -84,7 +84,12 @@ namespace Presentation
             // 
             // dgvProductList
             // 
-            this.dgvProductList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvProductList.AllowUserToAddRows = false;
+            this.dgvProductList.AllowUserToDeleteRows = false;
+            this.dgvProductList.AllowUserToResizeColumns = false;
+            this.dgvProductList.AllowUserToResizeRows = false;
+            this.dgvProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProductList.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Location = new System.Drawing.Point(38, 175);
@@ -97,6 +102,8 @@ namespace Presentation
             // 
             // pbxProduct
             // 
+            this.pbxProduct.BackColor = System.Drawing.Color.White;
+            this.pbxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxProduct.Location = new System.Drawing.Point(990, 204);
             this.pbxProduct.Name = "pbxProduct";
             this.pbxProduct.Size = new System.Drawing.Size(232, 240);
@@ -127,6 +134,7 @@ namespace Presentation
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInfo
             // 
@@ -161,13 +169,13 @@ namespace Presentation
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblProductName.Location = new System.Drawing.Point(1060, 152);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(64, 17);
+            this.lblProductName.Size = new System.Drawing.Size(86, 25);
             this.lblProductName.TabIndex = 9;
             this.lblProductName.Text = "Product";
             // 
             // txtBoxDescription
             // 
-            this.txtBoxDescription.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtBoxDescription.BackColor = System.Drawing.Color.White;
             this.txtBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDescription.Location = new System.Drawing.Point(990, 465);
             this.txtBoxDescription.Multiline = true;
@@ -177,11 +185,11 @@ namespace Presentation
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1263, 713);
+            this.ClientSize = new System.Drawing.Size(1257, 713);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.btnDelete);

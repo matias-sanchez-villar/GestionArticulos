@@ -23,43 +23,20 @@ namespace Presentation
 
         private void Main_Load(object sender, EventArgs e)
         {
-            ProductBusiness ProductBusiness = new ProductBusiness();
-            try
-            {
-                ProductList = ProductBusiness.listProducts();
-
-                dgvProductList.DataSource = ProductList;
-
-                dgvProductList.Columns["ID"].Visible =false;
-
-                /*
-                    dgvProductList.Columns["URLImagen"].Visible = false;
-                    dgvProductList.Columns["URLImagen"].Visible = false;
-                 */
-
-                reloadImg(ProductList[0].URLimage);
-                reloadName(ProductList[0].Name);
-                reloadDescription(ProductList[0].Description);
-                
-                txtBoxDescription.ReadOnly = true;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            loadDgv();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddProduct addProductDialog = new AddProduct();
             addProductDialog.ShowDialog();
+            loadDgv();
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            ProductInfo productInfoDialog = new ProductInfo();
-            productInfoDialog.ShowDialog();
+            ProductInfoSearch productInfoSearchDialog = new ProductInfoSearch();
+            productInfoSearchDialog.ShowDialog();
         }
 
        
@@ -67,6 +44,7 @@ namespace Presentation
         private void reloadImg(string img)
         {
             pbxProduct.Load(img);
+            pbxProduct.SizeMode = PictureBoxSizeMode.StretchImage ;
         }
 
         // Recarga el nombre del Label
@@ -84,9 +62,40 @@ namespace Presentation
         private void dgvProductList_Click(object sender, EventArgs e)
         {
             Product product = (Product) dgvProductList.CurrentRow.DataBoundItem;
-            reloadImg(ProductList[0].URLimage);
-            reloadName(ProductList[0].Name);
-            reloadDescription(ProductList[0].Description);
+            reloadImg(product.URLimage);
+            reloadName(product.Name);
+            reloadDescription(product.Description);
+        }
+
+        private void loadDgv()
+        {
+            ProductBusiness ProductBusiness = new ProductBusiness();
+            try
+            {
+                ProductList = ProductBusiness.listProducts();
+
+                dgvProductList.DataSource = ProductList;
+
+                dgvProductList.Columns["ID"].Visible = false;
+                dgvProductList.Columns["URLImage"].Visible = false;
+                dgvProductList.Columns["Description"].Visible = false;
+
+                reloadImg(ProductList[0].URLimage);
+                reloadName(ProductList[0].Name);
+                reloadDescription(ProductList[0].Description);
+
+                txtBoxDescription.ReadOnly = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            loadDgv();
         }
     }
 }

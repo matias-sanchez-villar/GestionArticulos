@@ -107,7 +107,7 @@ namespace Presentation
             this.lblUrl.BackColor = System.Drawing.Color.Transparent;
             this.lblUrl.Location = new System.Drawing.Point(40, 279);
             this.lblUrl.Name = "lblUrl";
-            this.lblUrl.Size = new System.Drawing.Size(137, 30);
+            this.lblUrl.Size = new System.Drawing.Size(91, 20);
             this.lblUrl.TabIndex = 7;
             this.lblUrl.Text = "Image URL";
             // 
@@ -197,11 +197,14 @@ namespace Presentation
             this.btnAceptAdd.TabIndex = 16;
             this.btnAceptAdd.Text = "Add";
             this.btnAceptAdd.UseVisualStyleBackColor = true;
+            this.btnAceptAdd.Click += new System.EventHandler(this.btnAceptAdd_Click);
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(584, 612);
             this.Controls.Add(this.btnAceptAdd);
             this.Controls.Add(this.lblStock);
@@ -226,6 +229,7 @@ namespace Presentation
             this.MinimumSize = new System.Drawing.Size(606, 668);
             this.Name = "AddProduct";
             this.Text = "Add product";
+            this.Load += new System.EventHandler(this.AddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

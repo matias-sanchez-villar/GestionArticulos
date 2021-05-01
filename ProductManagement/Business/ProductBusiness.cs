@@ -16,7 +16,7 @@ namespace Business
 
             try
             {
-                access.setQuery("select p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCartegoria inner join Marcas M on M.ID = P.IDMarca");
+                access.setQuery("select p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCategoria inner join Marcas M on M.ID = P.IDMarca order by p.Cantidad desc");
                 access.executeQuery();
 
                 while (access.Reader.Read())
@@ -45,6 +45,88 @@ namespace Business
                 access.closeConnection();
             }
         }
+        // Returns brand list for combo box
+        public List<Brand> listBrands()
+        {
+            List<Brand> list = new List<Brand>();
+            DataAccess access = new DataAccess();
+
+            try
+            {
+                access.setQuery("Select ID, Nombre From Marcas");
+                access.executeQuery();
+
+                while (access.Reader.Read())
+                {
+                    list.Add(new Brand((string)access.Reader["Nombre"], (int)access.Reader["ID"]));
+                }
+                return list;
+             }
+            catch (Exception exc)
+            {
+
+                throw exc;
+            }
+            finally
+            {
+                access.closeConnection();
+            }
+        }
+        // Returns Category list for combo box
+        public List<Category> listCategory()
+        {
+            List<Category> list = new List<Category>();
+            DataAccess access = new DataAccess();
+
+            try
+            {
+                access.setQuery("Select ID, Nombre From Categorias");
+                access.executeQuery();
+
+                while (access.Reader.Read())
+                {
+                    list.Add(new Category((string)access.Reader["Nombre"], (int)access.Reader["ID"]));
+                }
+                return list;
+            }
+            catch (Exception exc)
+            {
+
+                throw exc;
+            }
+            finally
+            {
+                access.closeConnection();
+            }
+        }
+
+        public void addProduct(Product productAdd)
+        {
+            DataAccess data = new DataAccess();
+            //Product prodAux = new Product();
+
+            try
+            {
+                //string values = $"values('{ productAdd.Code }', '{ productAdd.Name }', '{ productAdd.Description }', { productAdd.Brand.ID }" +
+                //                $",{ productAdd.Category.ID },'{ productAdd.URLimage }',{ productAdd.Price },{ productAdd.Quantity })";
+                string values = "values( ' " + productAdd.Code + " ' , ' "+ productAdd.Name + " ', ' " + productAdd.Description + " ', " + productAdd.Brand.ID + ", " + productAdd.Category.ID + ", ' " + productAdd.URLimage + " ', " + productAdd.Price + ", " + productAdd.Quantity + ")";
+                data.setQuery("Insert into Producto (Codigo, Nombre, Descripcion, IDMarca, IDCategoria, URLimagen, Precio, Cantidad)" + values);
+                data.executeAction();
+
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+
+            }
+        }
+
+
+
+
 
     }
 }
