@@ -52,7 +52,7 @@ namespace Presentation
             this.txtSearchBar.Location = new System.Drawing.Point(184, 77);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Size = new System.Drawing.Size(642, 30);
+            this.txtSearchBar.Size = new System.Drawing.Size(642, 23);
             this.txtSearchBar.TabIndex = 0;
             // 
             // btnSearch
@@ -160,6 +160,7 @@ namespace Presentation
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblProductName
             // 
@@ -169,7 +170,7 @@ namespace Presentation
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblProductName.Location = new System.Drawing.Point(1060, 152);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(86, 25);
+            this.lblProductName.Size = new System.Drawing.Size(64, 17);
             this.lblProductName.TabIndex = 9;
             this.lblProductName.Text = "Product";
             // 
@@ -185,11 +186,11 @@ namespace Presentation
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1257, 713);
+            this.ClientSize = new System.Drawing.Size(1263, 713);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.btnDelete);

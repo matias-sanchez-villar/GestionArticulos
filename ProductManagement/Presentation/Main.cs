@@ -97,5 +97,34 @@ namespace Presentation
         {
             loadDgv();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            Product Selected = (Product)dgvProductList.CurrentRow.DataBoundItem;
+            ProductBusiness ProductBusiness = new ProductBusiness();
+            try
+            {
+                if (MessageBox.Show("esto lo hace doro que sabe ingles " + Selected.Name, "Delet", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ProductBusiness.DeleteProduct((int)Selected.ID);
+                    loadDgv();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }
