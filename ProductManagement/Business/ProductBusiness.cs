@@ -16,7 +16,7 @@ namespace Business
 
             try
             {
-                access.setQuery("select p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCategoria inner join Marcas M on M.ID = P.IDMarca order by p.Cantidad desc");
+                access.setQuery("select p.ID ,p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCategoria inner join Marcas M on M.ID = P.IDMarca order by p.Cantidad desc");
                 access.executeQuery();
 
                 while (access.Reader.Read())
@@ -120,11 +120,29 @@ namespace Business
             }
             finally
             {
-
+                data.closeConnection();
             }
         }
 
 
+        public void DeleteProduct(int ID)
+        {
+            DataAccess data = new DataAccess();
+
+            try
+            {
+                data.setQuery("Delete From Producto Where Id =" + ID);
+                data.executeAction();
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                data.closeConnection();
+            }
+        }
 
 
 

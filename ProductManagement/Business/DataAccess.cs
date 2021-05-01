@@ -54,5 +54,10 @@ namespace Business
             Command.ExecuteNonQuery();
         }
 
+        public void setParams(string name, object value)
+        {
+            Command.Parameters.AddWithValue(name, value);
+        }
+
     }
 }
