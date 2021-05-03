@@ -52,14 +52,15 @@ namespace Presentation
             this.txtSearchBar.Location = new System.Drawing.Point(184, 77);
             this.txtSearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.Size = new System.Drawing.Size(642, 23);
+            this.txtSearchBar.Size = new System.Drawing.Size(642, 26);
             this.txtSearchBar.TabIndex = 0;
+            this.txtSearchBar.TextChanged += new System.EventHandler(this.txtSearchBar_TextChanged);
             // 
             // btnSearch
             // 
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnSearch.Location = new System.Drawing.Point(847, 73);
+            this.btnSearch.Location = new System.Drawing.Point(847, 75);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.MaximumSize = new System.Drawing.Size(100, 30);
             this.btnSearch.MinimumSize = new System.Drawing.Size(100, 30);
@@ -68,6 +69,7 @@ namespace Presentation
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // logoPictureBox
             // 
@@ -170,7 +172,7 @@ namespace Presentation
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblProductName.Location = new System.Drawing.Point(1060, 152);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(64, 17);
+            this.lblProductName.Size = new System.Drawing.Size(74, 20);
             this.lblProductName.TabIndex = 9;
             this.lblProductName.Text = "Product";
             // 
@@ -186,11 +188,11 @@ namespace Presentation
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1263, 713);
+            this.ClientSize = new System.Drawing.Size(1261, 713);
             this.Controls.Add(this.txtBoxDescription);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.btnDelete);

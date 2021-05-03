@@ -32,5 +32,4 @@ C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\Ge
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.exe
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.pdb
-C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 1 - Comercio\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.ProductInfoSearch.resources
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.ProductInfoSearch.resources

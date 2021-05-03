@@ -35,11 +35,14 @@ namespace Presentation
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            ProductInfoSearch productInfoSearchDialog = new ProductInfoSearch();
-            productInfoSearchDialog.ShowDialog();
+
+            Product selected = (Product)dgvProductList.CurrentRow.DataBoundItem;
+            ProductInfo formInfo = new ProductInfo(selected);
+            formInfo.ShowDialog();
+            loadDgv();
         }
 
-       
+
 
         private void reloadImg(string img)
         {
@@ -67,6 +70,7 @@ namespace Presentation
             reloadDescription(product.Description);
         }
 
+        // Carga la información del data grid view
         private void loadDgv()
         {
             ProductBusiness ProductBusiness = new ProductBusiness();
@@ -76,10 +80,7 @@ namespace Presentation
 
                 dgvProductList.DataSource = ProductList;
 
-                dgvProductList.Columns["ID"].Visible = false;
-                dgvProductList.Columns["URLImage"].Visible = false;
-                dgvProductList.Columns["Description"].Visible = false;
-
+                hideColumns();
                 reloadImg(ProductList[0].URLimage);
                 reloadName(ProductList[0].Name);
                 reloadDescription(ProductList[0].Description);
@@ -93,11 +94,13 @@ namespace Presentation
             }
         }
 
+        // Recarga el dgv
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             loadDgv();
         }
 
+        // Borra un producto seleccionado
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
@@ -105,7 +108,7 @@ namespace Presentation
             ProductBusiness ProductBusiness = new ProductBusiness();
             try
             {
-                if (MessageBox.Show("esto lo hace doro que sabe ingles " + Selected.Name, "Delet", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete" + Selected.Name + "?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     ProductBusiness.DeleteProduct((int)Selected.ID);
                     loadDgv();
@@ -115,16 +118,43 @@ namespace Presentation
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void hideColumns()
+        {
+            dgvProductList.Columns["ID"].Visible = false;
+            dgvProductList.Columns["URLImage"].Visible = false;
+            dgvProductList.Columns["Description"].Visible = false;
+        }
+
+        private void search()
+        {
+            //txtFiltro
+            List<Product> filteredList;
+            if (txtSearchBar.Text != "")
+            {
+                filteredList = this.ProductList.FindAll(toSearch => toSearch.Name.ToUpper().Contains(txtSearchBar.Text.ToUpper()) || toSearch.Brand.Name.ToUpper().Contains(txtSearchBar.Text.ToUpper()) || toSearch.Category.Name.ToUpper().Contains(txtSearchBar.Text.ToUpper()));
+                dgvProductList.DataSource = null;
+                dgvProductList.DataSource = filteredList;
+            }
+            else
+            {
+                dgvProductList.DataSource = null;
+                dgvProductList.DataSource = ProductList;
+            }
+
+            hideColumns();
+        }
 
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            search();
+        }
 
-
-
-
-
-
-
-
+        private void txtSearchBar_TextChanged(object sender, EventArgs e)
+        {
+            search();
         }
     }
 }
