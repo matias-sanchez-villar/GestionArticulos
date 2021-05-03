@@ -43,7 +43,6 @@ namespace Presentation
         }
 
 
-
         private void reloadImg(string img)
         {
             pbxProduct.Load(img);
@@ -94,9 +93,12 @@ namespace Presentation
             }
         }
 
-        // Recarga el dgv
+        // Actualiza un producto seleccionado
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            Product selected = (Product)dgvProductList.CurrentRow.DataBoundItem;
+            AddProduct UpdateProduct = new AddProduct(selected);
+            UpdateProduct.ShowDialog();
             loadDgv();
         }
 

@@ -16,7 +16,7 @@ namespace Business
 
             try
             {
-                access.setQuery("select p.ID, p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.Nombre as MarcaProducto, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCategoria inner join Marcas M on M.ID = P.IDMarca order by p.Cantidad desc");
+                access.setQuery("select p.ID, p.Codigo, p.Nombre, p.Descripcion, p.Precio, P.Cantidad, P.URLimagen, M.ID MarcaID, M.Nombre as MarcaProducto, C.ID CategoriaId, C.Nombre as CategoriaProducto from Producto p inner join Categorias C on c.ID = p.IDCategoria inner join Marcas M on M.ID = P.IDMarca order by p.Cantidad desc");
                 access.executeQuery();
 
                 while (access.Reader.Read())
@@ -31,7 +31,9 @@ namespace Business
                     productAux.Quantity = (int) access.Reader["Cantidad"];
                     productAux.URLimage = (String) access.Reader["URLImagen"];
                     productAux.Brand = new Brand((string)access.Reader["MarcaProducto"]);
+                    productAux.Brand.ID = (int)access.Reader["MarcaID"];
                     productAux.Category = new Category((string)access.Reader["CategoriaProducto"]);
+                    productAux.Category.ID = (int)access.Reader["CategoriaId"];
 
                     list.Add(productAux);
                 }
@@ -108,8 +110,6 @@ namespace Business
 
             try
             {
-                //string values = $"values('{ productAdd.Code }', '{ productAdd.Name }', '{ productAdd.Description }', { productAdd.Brand.ID }" +
-                //                $",{ productAdd.Category.ID },'{ productAdd.URLimage }',{ productAdd.Price },{ productAdd.Quantity })";
                 string values = "values( ' " + productAdd.Code + " ' , ' "+ productAdd.Name + " ', ' " + productAdd.Description + " ', " + productAdd.Brand.ID + ", " + productAdd.Category.ID + ", ' " + productAdd.URLimage + " ', " + productAdd.Price + ", " + productAdd.Quantity + ")";
                 data.setQuery("Insert into Producto (Codigo, Nombre, Descripcion, IDMarca, IDCategoria, URLimagen, Precio, Cantidad)" + values);
                 data.executeAction();
@@ -142,6 +142,36 @@ namespace Business
             {
                 data.closeConnection();
             }
+        }
+
+        public void updateProduct(Product prodAux)
+        {
+
+            DataAccess data = new DataAccess();
+            try
+            {
+                data.setQuery("update Producto set Nombre = @name, Precio = @price, Descripcion = @description, UrlImagen = @imageUrl, Codigo = @code, Cantidad = @Quantity, IDMarca = @idBrand, IDCategoria = @idCategory Where Id = @id");
+                data.setParams("@name", prodAux.Name);
+                data.setParams("@price", prodAux.Price);
+                data.setParams("@description", prodAux.Description);
+                data.setParams("@imageUrl", prodAux.URLimage);
+                data.setParams("@code", prodAux.Code);
+                data.setParams("@Quantity", prodAux.Quantity);
+                data.setParams("@idBrand", prodAux.Brand.ID);
+                data.setParams("@idCategory", prodAux.Category.ID);
+                data.setParams("@id", prodAux.ID);
+
+                data.executeAction();
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                data.closeConnection();
+            }
+
         }
 
 

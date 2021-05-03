@@ -14,9 +14,22 @@ namespace Presentation
 {
     public partial class AddProduct : Form
     {
+        private Product product = null;
+
         public AddProduct()
         {
             InitializeComponent();
+        }
+
+        public AddProduct(Product update)
+        {
+            InitializeComponent();
+            this.btnAceptAdd.Text = "Update";
+
+            product = update;
+
+            Text = "Product - Update Product";
+
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
@@ -28,6 +41,22 @@ namespace Presentation
             {
                 cboBrand.DataSource = businessAux.listBrands();
                 cboCategory.DataSource = businessAux.listCategory();
+                //cboBrand.ValueMember = "ID";
+                //cboBrand.DisplayMember = "category";
+                //cboCategory.ValueMember = "ID";
+                //cboCategory.DisplayMember = "category";
+
+                if(product != null)
+                {
+                    this.txtBoxCode.Text = product.Code.ToString();
+                    this.txtBoxName.Text = product.Name.ToString();
+                    this.txtBoxDescription.Text = product.Description.ToString();
+                    this.cboBrand.SelectedItem = product.Brand.ToString();
+                    this.cboCategory.SelectedItem = product.Category.ToString();
+                    this.txtBoxUrl.Text = product.URLimage.ToString();
+                    this.txtBoxPrice.Text = product.Price.ToString();
+                    this.txtBoxStock.Text = product.Quantity.ToString();
+                }
             }
             catch (Exception ex)
             {
@@ -41,31 +70,42 @@ namespace Presentation
 
         private void btnAceptAdd_Click(object sender, EventArgs e)
         {
-            Product prodAux = new Product();
-            ProductBusiness toAdd = new ProductBusiness();
+            
+            ProductBusiness toAddOrUpdate = new ProductBusiness();
 
-            try
-            {
+                try
+                {
+                if (product == null)
+                    product = new Product();
 
-                prodAux.Code = (string)txtBoxCode.Text;
-                prodAux.Name = (string)txtBoxName.Text;
-                prodAux.Description = (string)txtBoxDescription.Text;
-                prodAux.Brand = (Brand)cboBrand.SelectedItem;
-                prodAux.Category = (Category)cboCategory.SelectedItem;
-                prodAux.URLimage = (string)txtBoxUrl.Text;
-                prodAux.Price = decimal.Parse(txtBoxPrice.Text);
-                prodAux.Quantity = int.Parse(txtBoxStock.Text);
+                    product.Code = (string)txtBoxCode.Text;
+                    product.Name = (string)txtBoxName.Text;
+                    product.Description = (string)txtBoxDescription.Text;
+                    product.Brand = (Brand)cboBrand.SelectedItem;
+                    product.Category = (Category)cboCategory.SelectedItem;
+                    product.URLimage = (string)txtBoxUrl.Text;
+                    product.Price = decimal.Parse(txtBoxPrice.Text);
+                    product.Quantity = int.Parse(txtBoxStock.Text);
 
-                toAdd.addProduct(prodAux);
+                if(product.ID == 0)
+                {
+                    toAddOrUpdate.addProduct(product);
+                    MessageBox.Show("Product successfully added");
+                }
+                else
+                {
+                    toAddOrUpdate.updateProduct(product);
+                    MessageBox.Show("Product successfully updated");
 
-                MessageBox.Show("Product successfully added");
-                this.Close();
-            }
-            catch (Exception exc)
-            {
+                }
+                    this.Close();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.ToString());
+                }
 
-                MessageBox.Show(exc.ToString());
-            }
+            
         }
 
 
