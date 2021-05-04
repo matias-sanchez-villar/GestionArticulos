@@ -40,24 +40,23 @@ namespace Presentation
 
             if (prodAux != null)
             {
-
-                PbxImageFill.Load(prodAux.URLimage);
-                lblNameFill.Text = prodAux.Name.ToString();
-                lblPriceFill.Text = prodAux.Price.ToString();
-                lblBrandFill.Text = prodAux.Brand.ToString();
-                lblCategoryfill.Text = prodAux.Category.ToString();
-                lblStockFill.Text = prodAux.Quantity.ToString();
-                txtDescriptionFill.Text = prodAux.Description.ToString();
-            }
-            else
-            {
-                PbxImageFill.Load("https://media0.giphy.com/media/UHAYP0FxJOmFBuOiC2/giphy.gif?cid=ecf05e47ev43uz5eifu0arc2qmmeorc2ulc5yglqwzkt6jag&rid=giphy.gif&ct=g");
-                lblNameFill.Text = "Name not found";
-                lblPriceFill.Text = "Price not found";
-                lblBrandFill.Text ="Brand not found";
-                lblCategoryfill.Text = "Category not found";
-                lblStockFill.Text = "Stock not found";
-                txtDescriptionFill.Text = "Description not found, but the answer is in your heart <3";
+                try
+                {
+                    PbxImageFill.Load(prodAux.URLimage);
+                }
+                catch (Exception)
+                {
+                    PbxImageFill.Load("https://media0.giphy.com/media/UHAYP0FxJOmFBuOiC2/giphy.gif?cid=ecf05e47ev43uz5eifu0arc2qmmeorc2ulc5yglqwzkt6jag&rid=giphy.gif&ct=g");
+                }
+                finally
+                {
+                    lblNameFill.Text = prodAux.Name.ToString();
+                    lblPriceFill.Text = prodAux.Price.ToString();
+                    lblBrandFill.Text = prodAux.Brand.ToString();
+                    lblCategoryfill.Text = prodAux.Category.ToString();
+                    lblStockFill.Text = prodAux.Quantity.ToString();
+                    txtDescriptionFill.Text = prodAux.Description.ToString();
+                }
             }
 
         }

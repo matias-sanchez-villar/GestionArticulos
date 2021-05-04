@@ -93,6 +93,9 @@ namespace Presentation
 
                 txtBoxDescription.ReadOnly = true;
 
+                this.dgvProductList.Rows[0].Selected = true;
+                this.dgvProductList.CurrentCell = this.dgvProductList.Rows[0].Cells[1];
+
             }
             catch (Exception ex)
             {
