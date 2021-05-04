@@ -45,7 +45,14 @@ namespace Presentation
 
         private void reloadImg(string img)
         {
-            pbxProduct.Load(img);
+            try
+            {
+                pbxProduct.Load(img);
+            }
+            catch (Exception)
+            {
+                pbxProduct.Load("https://media0.giphy.com/media/UHAYP0FxJOmFBuOiC2/giphy.gif?cid=ecf05e47ev43uz5eifu0arc2qmmeorc2ulc5yglqwzkt6jag&rid=giphy.gif&ct=g");
+            }
             pbxProduct.SizeMode = PictureBoxSizeMode.StretchImage ;
         }
 

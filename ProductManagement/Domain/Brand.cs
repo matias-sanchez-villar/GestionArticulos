@@ -10,7 +10,6 @@ namespace Domain
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        //public Brand() { }
         public Brand(string name) { this.Name = name; }
         public Brand(string name, int id)
         {

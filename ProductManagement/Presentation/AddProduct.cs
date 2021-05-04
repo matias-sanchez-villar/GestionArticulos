@@ -41,10 +41,6 @@ namespace Presentation
             {
                 cboBrand.DataSource = businessAux.listBrands();
                 cboCategory.DataSource = businessAux.listCategory();
-                //cboBrand.ValueMember = "ID";
-                //cboBrand.DisplayMember = "category";
-                //cboCategory.ValueMember = "ID";
-                //cboCategory.DisplayMember = "category";
 
                 if(product != null)
                 {
@@ -64,13 +60,10 @@ namespace Presentation
                 MessageBox.Show(ex.ToString());
             }
 
-
         }
-
 
         private void btnAceptAdd_Click(object sender, EventArgs e)
         {
-            
             ProductBusiness toAddOrUpdate = new ProductBusiness();
 
                 try

@@ -19,7 +19,7 @@ Create table Producto(
 	Descripcion varchar(150) not null,
 	IDMarca int foreign key references Marcas(ID) not null,
 	IDCategoria int foreign key references Categorias(ID) not null,
-	URLimagen varchar(350) null,
+	URLimagen varchar(1000) null,
 	Precio money not null check(Precio > 0),
 	Cantidad int null check(Cantidad > 0)
 )

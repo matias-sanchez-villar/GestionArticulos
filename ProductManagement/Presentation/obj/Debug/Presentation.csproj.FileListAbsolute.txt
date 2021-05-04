@@ -33,3 +33,20 @@ C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\Ge
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.exe
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.pdb
 C:\Users\matias\Documents\UTN\Tercer Cuatrimestre\Programacion 3\Windows Form\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.ProductInfoSearch.resources
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Presentation.exe
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Presentation.pdb
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Business.dll
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Domain.dll
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Business.pdb
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\bin\Debug\Domain.pdb
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.AddProduct.resources
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.Main.resources
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.ProductInfo.resources
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.exe
+C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Presentation\obj\Debug\Presentation.pdb
