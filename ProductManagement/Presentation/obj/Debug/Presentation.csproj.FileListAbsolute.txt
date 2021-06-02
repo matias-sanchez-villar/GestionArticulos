@@ -67,3 +67,20 @@ C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Presentation\obj\Debug\Presentation.exe
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Presentation\obj\Debug\Presentation.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.exe
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Presentation.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Business.dll
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Domain.dll
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Business.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\bin\Debug\Domain.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.AssemblyReference.cache
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.AddProduct.resources
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.Main.resources
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.ProductInfo.resources
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.exe
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Presentation\obj\Debug\Presentation.pdb

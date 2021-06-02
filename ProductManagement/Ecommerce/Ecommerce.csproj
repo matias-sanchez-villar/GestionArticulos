@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Catalog.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
@@ -87,6 +88,13 @@
     </Compile>
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
