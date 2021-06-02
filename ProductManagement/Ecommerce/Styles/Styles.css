@@ -1,0 +1,67 @@
+﻿:root {
+    --main-color: #1a2639;
+    --secondary-color: #3e4a61;
+    --third-color: #f5f7fa;
+    --accent-color: #f23557;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.navbar {
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
+.navbar .navbar-toggler {
+    background-color: #0e153a;
+    height: 40px;
+}
+
+.navbar .navbar-toggler .fas {
+    color: #e2f3f5 ;
+}
+
+.logo-container {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background-color: var(--third-color) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item a{
+    color: var(--third-color);
+}
+
+.nav-item a:first-child{
+    margin-left: 30px;
+}
+
+.btn{
+    background-color: var(--accent-color);
+    color: var(--third-color);
+}
+
+.carousel-container{
+    margin-top: 90px;
+}
+
+.carousel-item{
+    object-fit: contain;
+}
+
+.carousel-inner .carousel-item img {
+    max-height: 550px;
+}

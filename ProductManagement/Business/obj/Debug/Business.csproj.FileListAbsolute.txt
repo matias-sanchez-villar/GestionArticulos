@@ -25,3 +25,12 @@ C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Business\obj\Debug\B
 C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Business\obj\Debug\Business.dll
 C:\Users\matias\Downloads\GestionAriculos\ProductManagement\Business\obj\Debug\Business.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\bin\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\bin\Debug\Business.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\bin\Debug\Domain.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\bin\Debug\Domain.pdb
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\obj\Debug\Business.dll
+C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Business\obj\Debug\Business.pdb
