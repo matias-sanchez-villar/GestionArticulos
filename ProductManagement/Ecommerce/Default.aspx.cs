@@ -22,14 +22,14 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
-                Session.Add("Error", ex.ToString())
+                Session.Add("Error", ex.ToString());
                 Response.Redirect("Error.aspx"); // Falta crearla
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }
