@@ -22,10 +22,7 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
-<<<<<<< HEAD
-=======
-                Session.Add("Error", ex.ToString());
->>>>>>> e61b175f4c25ecb15e2d3cbab0d5ab14ef299495
+                Session.Add("Error", ex.ToString())
                 Response.Redirect("Error.aspx"); // Falta crearla
             }
         }

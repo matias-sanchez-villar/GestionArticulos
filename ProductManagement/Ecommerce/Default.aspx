@@ -57,11 +57,9 @@
 
             <h1 style="text-align:center;"">Featured products</h1>
                 
-               <%
-                   //Domain.Product = lista;
+               <% //Domain.Product = lista;
                    for(int i = 0; i<6; i++)
-                   {
-               %>
+                   { %>
                    <div class="card" style="width: 18rem; height:450px;" data-id="<% = lista[i].ID %>">
                       <img src="<% = lista[i].URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
                       <div class="card-body">
@@ -70,9 +68,7 @@
                           <asp:Button ID="Button1" OnClick="Button1_Click" onClientClick="return false" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="More"/>
                       </div>
                    </div>
-                <%
-                }
-                %>
+                <% } %>
         </div>
     </div>
 
