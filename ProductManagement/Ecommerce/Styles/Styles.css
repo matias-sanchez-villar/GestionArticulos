@@ -65,3 +65,11 @@ body {
 .carousel-inner .carousel-item img {
     max-height: 550px;
 }
+
+.row-to-center{
+    justify-content: center;
+}
+
+.card-body {
+    color: var(--secondary-color);
+}

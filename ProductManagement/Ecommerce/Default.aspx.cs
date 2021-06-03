@@ -23,9 +23,13 @@ namespace Ecommerce
             }
             catch (Exception)
             {
-
                 Response.Redirect("Error.aspx"); // Falta crearla
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

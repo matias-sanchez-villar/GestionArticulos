@@ -3,6 +3,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
 
     <div class="carousel-container">
         
@@ -51,27 +53,52 @@
 
     <div class="container-fluid">
 
-        <div class="row p-5 m-5" style="gap: 30px;">
+        <div class="row row-to-center p-5 m-5" style="gap: 30px;">
 
-            <%
-
-                foreach (Domain.Product product in lista)
-                { %>
-                   <div class="card" style="width: 18rem; height:450px;">
-                      <img src="<% = product.URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
+            <h1 style="text-align:center;"">Featured products</h1>
+                
+               <%
+                   //Domain.Product = lista;
+                   for(int i = 0; i<6; i++)
+                   {
+               %>
+                   <div class="card" style="width: 18rem; height:450px;" data-id="<% = lista[i].ID %>">
+                      <img src="<% = lista[i].URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
                       <div class="card-body">
-                        <h5 class="card-title"><% = product.Name %></h5>
-                        <p class="card-text"><% = product.Description %></p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <h5 class="card-title"><% = lista[i].Name %></h5>
+                        <p class="card-text"><% = lista[i].Description %></p>
+                          <asp:Button ID="Button1" OnClick="Button1_Click" onClientClick="return false" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="More"/>
                       </div>
                    </div>
-                <% }
-
-
-            %>
-
+                <%
+                }
+                %>
         </div>
-
     </div>
+
+       <div class="modal" id="toopenmodal" tabindex="-1">
+         <div class="modal-dialog">
+            <div class="modal-content">
+
+             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                 <ContentTemplate>
+                    <div class="modal-header">
+                        <img src="<% %>" />
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><% %></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add to cart</button>
+                    </div>
+                 </ContentTemplate>
+            </asp:UpdatePanel>
+
+             </div>
+          </div>
+        </div>
 
 </asp:Content>
