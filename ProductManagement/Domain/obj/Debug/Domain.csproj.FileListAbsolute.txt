@@ -22,3 +22,9 @@ C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Domain\obj\Debug\Domain.dll
 C:\Users\arost\Desktop\Isidoro\Facultad\Programación III\TP Grupal 2  Ecommerce - final\ProductManagement\Domain\obj\Debug\Domain.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\bin\Debug\Domain.dll
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\bin\Debug\Domain.pdb
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.dll
+C:\Users\matias\Downloads\GestionArticulos\ProductManagement\Domain\obj\Debug\Domain.pdb

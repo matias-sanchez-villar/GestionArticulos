@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Business;
-using Presentation;
 using Domain;
 
 namespace Ecommerce
@@ -21,8 +20,12 @@ namespace Ecommerce
             {
                 lista = business.listProducts();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+                Session.Add("Error", ex.ToString());
+>>>>>>> e61b175f4c25ecb15e2d3cbab0d5ab14ef299495
                 Response.Redirect("Error.aspx"); // Falta crearla
             }
         }
