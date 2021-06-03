@@ -57,7 +57,7 @@
 
             <h1 style="text-align:center;"">Featured products</h1>
                 
-               <% //Domain.Product = lista;
+               <%
                    for(int i = 0; i<6; i++)
                    { %>
                    <div class="card" style="width: 18rem; height:450px;" data-id="<% = lista[i].ID %>">
@@ -66,36 +66,43 @@
                         <h5 class="card-title"><% = lista[i].Name %></h5>
                         <p class="card-text"><% = lista[i].Description %></p>
                         <h6 style="text-align:center;"> $<% = lista[i].Price.ToString().TrimEnd(new char[] { '0' } ).Replace(',', ' ') %></h6>
-                        <asp:Button ID="Button1" OnClick="Button1_Click" CommandArgument="<% = lista[i].ID %>" onClientClick="return false" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="More"/>
+                        <asp:Button ID="Button1" CommandArgument="<% = lista[i].ID %>" onClientClick="return false;" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="Add to cart"/>
                       </div>
                    </div>
                 <% } %>
         </div>
     </div>
 
-       <div class="modal" id="toopenmodal" tabindex="-1">
-         <div class="modal-dialog">
-            <div class="modal-content">
 
-             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                 <ContentTemplate>
-                    <div class="modal-header">
-                        <img src="<%  %>" />
-                        <h5 class="modal-title"></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p><% %></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Add to cart</button>
-                    </div>
-                 </ContentTemplate>
-            </asp:UpdatePanel>
+  <script>
 
-             </div>
-          </div>
-        </div>
+      function createModal(id) {
+          const modal = document.createElement('div');
+          modal.classList.add('modal');
+          modal.setAttribute('tabindex', '-1')
+          modal.innerHTML = `
+                             <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <img src="#" />
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p> asdasd </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Add to cart</button>
+                                     </div>
+                                 </div>
+                              </div>
+                `
+          document.body.appendChild(modal);
+          return false;
+      }
+  </script>
+
+      
 
 </asp:Content>
