@@ -3,9 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:GridView ID="GridView1" runat="server">
+    <asp:GridView ID="dvgCart" runat="server">
         <Columns>
-
+            <asp:BoundField DataField="Name" HeaderText="Name"/>
+            <asp:BoundField DataField="Description" HeaderText="Description"/>
+            <asp:BoundField DataField="Price" HeaderText="Price"/>
         </Columns>
     </asp:GridView>
 

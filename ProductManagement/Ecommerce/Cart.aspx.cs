@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Business;
+using Domain;
 
 namespace Ecommerce
 {
@@ -15,6 +17,7 @@ namespace Ecommerce
             {
                 ///Recibimos un objetos de tipo Producto y le pasmos ese objeto a cart.aspx
             }
+
         }
     }
 }
