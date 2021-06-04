@@ -14,7 +14,7 @@
                         <h5 class="card-title"><% = product.Name %></h5>
                         <p class="card-text" style=" text-align:left;"><% = product.Description %></p>
                         <h6 style="text-align:center;"> $<% = product.Price.ToString().TrimEnd(new char[] { '0' } ).Replace(',', ' ') %></h6>
-                        <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Add to cart" />
+                        <asp:Button ID="AddProductBtn" CommandArgument="<% = 1 %>" OnClick="AddProduct_click" class="btn btn-primary" runat="server" Text="Add to cart" />
                     </div>
                 </div>
         <% } %>
