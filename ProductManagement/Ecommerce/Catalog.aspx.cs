@@ -19,7 +19,11 @@ namespace Ecommerce
             ProductBusiness business = new ProductBusiness();
             try
             {
-                lista = business.listProducts();
+                if (!IsPostBack)
+                {
+                    RepeatCatalog.DataSource = business.listProducts();
+                    RepeatCatalog.DataBind();
+                }
             }
             catch (Exception ex)
             {
@@ -30,23 +34,9 @@ namespace Ecommerce
 
         protected void AddProduct_click(object sender, EventArgs e)
         {
-            string valueCheck = AddProductBtn.CommandArgument;
+            var argument = ((Button)sender).CommandArgument;
 
-            foreach (Domain.Product product in lista)
-            {
-                if( product.ID.ToString() == valueCheck.ToString())
-                {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
-
-                }
-                else
-                {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('La concha de tu madre')", true);
-
-                }
-            }
-
-
+            
         }
     }
 }

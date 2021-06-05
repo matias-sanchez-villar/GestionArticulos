@@ -66,7 +66,7 @@
                         <h5 class="card-title"><% = lista[i].Name %></h5>
                         <p class="card-text"><% = lista[i].Description %></p>
                         <h6 style="text-align:center;"> $<% = lista[i].Price.ToString().TrimEnd(new char[] { '0' } ).Replace(',', ' ') %></h6>
-                        <asp:Button ID="Button1" CommandArgument="<% = lista[i].ID %>" onClientClick="return false;" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="Add to cart"/>
+                        <asp:Button ID="Button1" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="Add to cart"/>
                       </div>
                    </div>
                 <% } %>

@@ -5,13 +5,24 @@
 
     <div style="margin-top:100px;" class="container-fluid">
 
-<%--    <asp:GridView ID="dvgCart" runat="server">
-        <Columns>
-            <asp:BoundField DataField="Name" HeaderText="Name"/>
-            <asp:BoundField DataField="Description" HeaderText="Description"/>
-            <asp:BoundField DataField="Price" HeaderText="Price"/>
-        </Columns>
-    </asp:GridView>--%>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 
