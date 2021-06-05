@@ -9,7 +9,7 @@ namespace Domain
     class Cart
     {
         public Product product { get; set; }
-        public float TotalPrice { get; set; }
+        public float TotalPrice { get; set;}
         public int Quantity {
             get
             {
@@ -19,6 +19,9 @@ namespace Domain
             {
                 if (value > 0)
                 {
+                    /*
+                        Si aumente la cantidad Automaticamente aumenta el precio total.
+                     */
                     Quantity = value;
                     TotalPrice = ((float)product.Price * (float)Quantity);
                 }

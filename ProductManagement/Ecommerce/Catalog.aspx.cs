@@ -12,7 +12,6 @@ namespace Ecommerce
     public partial class Catalog : System.Web.UI.Page
     {
         public List<Product> lista;
-        public static List<Product> shoppingCart;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,9 +33,26 @@ namespace Ecommerce
 
         protected void AddProduct_click(object sender, EventArgs e)
         {
+
             var argument = ((Button)sender).CommandArgument;
 
-            
+            /*
+                Buscamos de la lista de productos,
+                El producto con el mismo ID que el argument y
+                lo cargamos a un objeto producto 
+                para que no sea tan engorroso laburar con listas
+             */
+
+            Product Seleccionado = lista.Find(x => x.ID.ToString() == argument);
+
+            /*
+                El nombre Producto de la Session es muy generico.
+                Ponerle el nombre de a donde va a ir => Ejemplo Modal o MostrarProducto etx
+                Para no generar Coches.
+             */
+
+            Session.Add("Producto", Seleccionado);
+
         }
     }
 }

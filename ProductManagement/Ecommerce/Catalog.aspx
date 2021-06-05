@@ -5,6 +5,11 @@
 
     <div class="row row-to-center p-5 m-5" style="gap: 30px;">
         <h1 style="text-align:center;"">Featured products</h1>
+
+        <%--
+            tenemos que definir si, mosramos el producto un nuevo form o en un modal
+            Lo mismo va para Default
+        --%>
         
         <asp:Repeater runat="server" ID="RepeatCatalog">
 

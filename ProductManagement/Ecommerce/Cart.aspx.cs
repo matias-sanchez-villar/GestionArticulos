@@ -11,13 +11,30 @@ namespace Ecommerce
 {
     public partial class Cart : System.Web.UI.Page
     {
+        public List<Cart> cart;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            /*
+                Aca lo que estoy intentando hacer es recibir un producto casterarlo a Carrito,
+                Si el producto que esta dentro del carrito existe, aumentarle la cantidad,
+                y sino agregarlo a la lista del carrito.
+            */
+
             if (Session["Cart"] == null)
             {
-                ///Recibimos un objetos de tipo Producto y le pasmos ese objeto a cart.aspx
+                cart = new List<Cart>();
+            }
+            else
+            {
+                AddProduct();
             }
 
+        }
+
+        public void AddProduct()
+        {
+            
         }
     }
 }

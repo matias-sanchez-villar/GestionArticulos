@@ -15,6 +15,11 @@
                 </tr>
             </thead>
             <tbody>
+                <%--
+                    Bueno yo cree una lista para mostrar los producto en el carrito,
+                    Abria que definir si de aca se pueden agregar mas productos con un 
+                    TextBox TextMode="Number" o dejarlo fijo mostrarlo.
+                 --%>
                 <tr>
                   <th scope="row"></th>
                   <td></td>
