@@ -11,10 +11,10 @@ namespace Ecommerce
 {
     public partial class Cart : System.Web.UI.Page
     {
-        public List<Cart> cart;
+        public ListCart cartlist;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             /*
                 Aca lo que estoy intentando hacer es recibir un producto casterarlo a Carrito,
                 Si el producto que esta dentro del carrito existe, aumentarle la cantidad,
@@ -23,18 +23,15 @@ namespace Ecommerce
 
             if (Session["Cart"] == null)
             {
-                cart = new List<Cart>();
+                cartlist = new ListCart();
             }
             else
             {
-                AddProduct();
+                Cart cart = (Cart)Session["Cart"];
+
+                //cartlist.Modificar(cart);
             }
 
-        }
-
-        public void AddProduct()
-        {
-            
         }
     }
 }

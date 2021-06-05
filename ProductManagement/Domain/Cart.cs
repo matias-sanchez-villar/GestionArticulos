@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    class Cart
+    public class Cart
     {
         public Product product { get; set; }
-        public float TotalPrice { get; set;}
+        public float TotalPrice { get; set; }
         public int Quantity {
             get
             {
@@ -26,6 +26,16 @@ namespace Domain
                     TotalPrice = ((float)product.Price * (float)Quantity);
                 }
             }
+        }
+
+
+        /*
+            Cuando se cree la cantidad sea igual a 1;
+         */
+
+        public Cart()
+        {
+            Quantity = 1;
         }
 
     }
