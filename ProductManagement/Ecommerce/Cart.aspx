@@ -3,33 +3,25 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="margin-top:100px;" class="container-fluid">
+    <div style="margin-top:100px;" class="whole-container">
 
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Quantity</th>
-                  <th scope="col">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%--
-                    Bueno yo cree una lista para mostrar los producto en el carrito,
-                    Abria que definir si de aca se pueden agregar mas productos con un 
-                    TextBox TextMode="Number" o dejarlo fijo mostrarlo.
-                 --%>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-            </tbody>
-        </table>
+            <% foreach (Domain.Carrito item in cartlist)
+                { %>
+            <div class="cart-item-container">
 
-    </div>
+                <div class="cart-item-data">
+                    <h5 class="product-title"><% = item.Product.Name %> </h5>
+                    <h5 class="product-quantity" style="color: red;"><% = item.Quantity %> </h5>
+                    <h5 class="product-total-price">$<% = item.Product.Price * item.Quantity %> </h5>
+                    <img src="<% = item.Product.URLimage %>" />
+                </div>
+                <div class="cart-item-handler">
+                    <a href="Cart.aspx?id=<% = item.Product.ID %>" class="btn">+</a>
+                    <a href="Cart.aspx?id=<% = item.Product.ID %>&r=u" class="btn">-</a>
+                </div>
+            </div>
+        <%} %>
+        </div>
 
 
 </asp:Content>

@@ -6,26 +6,20 @@
     <div class="row row-to-center p-5 m-5" style="gap: 30px;">
         <h1 style="text-align:center;"">Featured products</h1>
 
-        <%--
-            tenemos que definir si, mosramos el producto un nuevo form o en un modal
-            Lo mismo va para Default
-        --%>
+        <% foreach (Domain.Product item in lista) {%>
         
-        <asp:Repeater runat="server" ID="RepeatCatalog">
-
-            <ItemTemplate>
-                <div class="card" style="width: 18rem; height:500px; text-align:center; ">
-                    <img src="<%#Eval("URLimage") %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
-                    <div class="card-body">
-                        <h5 class="card-title"><%#Eval("Name") %></h5>
-                        <p class="card-text" style=" text-align:left;"><%#Eval("Description") %></p>
-                        <h6 style="text-align:center;"> $<%#Eval("Price") %></h6>
-                        <asp:Button ID="btnAddProduct" runat="server" Text="Add to cart" CssClass="btn btn-primary" OnClick="AddProduct_click" CommandArgument='<%#Eval("ID") %>' />
-                    </div>
+            <div class="card" style="width: 18rem; height:500px; text-align:center; ">
+                    <img src="<% = item.URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
+                <div class="card-body">
+                    <h5 class="card-title"><% = item.Name %></h5>
+                    <p class="card-text" style=" text-align:left;"><% = item.Description %></p>
+                    <h6 style="text-align:center;"> $<% = item.Price %></h6>
+                    <a href="Cart.aspx?id=<% = item.ID %>" class="btn"> Add to cart </a>
+                    <a href="Detalle.aspx?id=<% = item.ID %>" class="btn"> Info </a>
                 </div>
-            </ItemTemplate>
+            </div>
 
-        </asp:Repeater>
+        <% } %>
 
     </div>
 

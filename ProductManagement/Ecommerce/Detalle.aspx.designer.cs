@@ -11,7 +11,7 @@ namespace Ecommerce
 {
 
 
-    public partial class Cart
+    public partial class Detalle
     {
     }
 }

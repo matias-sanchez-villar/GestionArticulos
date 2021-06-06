@@ -11,27 +11,55 @@ namespace Ecommerce
 {
     public partial class Cart : System.Web.UI.Page
     {
-        public ListCart cartlist;
+        public List<Carrito> cartlist;
+        public List<Product> list;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            /*
-                Aca lo que estoy intentando hacer es recibir un producto casterarlo a Carrito,
-                Si el producto que esta dentro del carrito existe, aumentarle la cantidad,
-                y sino agregarlo a la lista del carrito.
-            */
+            list = (List<Product>)Session["fullList"];
 
             if (Session["Cart"] == null)
             {
-                cartlist = new ListCart();
+                cartlist = new List<Carrito>();
             }
             else
             {
-                Cart cart = (Cart)Session["Cart"];
-
-                //cartlist.Modificar(cart);
+                cartlist = (List<Carrito>)Session["Cart"];
             }
 
+            if (Request.QueryString["id"] != null)
+            {
+
+                int id = int.Parse(Request.QueryString["id"]);
+                Product prod = list.Find(x => x.ID == id);
+
+                if(Request.QueryString["r"] == null)
+                {
+                    if (cartlist.Find(x => x.Product.ID == id) == null)
+                    {
+                        Carrito aux = new Carrito(prod);
+                        cartlist.Add(aux);
+                        Session.Add("Cart", cartlist);
+                    }
+                    else
+                    {
+                        Carrito item = cartlist.Find(x => x.Product.ID == id);
+                        item.aumentar();
+                        Session.Add("Cart", cartlist);
+                    }
+                }
+                else
+                {
+                    Carrito item = cartlist.Find(x => x.Product.ID == id);
+                    item.restar();
+                    if(item.Quantity == 0)
+                    {
+                        cartlist.Remove(item);
+                    }
+                    Session.Add("Cart", cartlist);
+                }
+                Response.Redirect("Cart.aspx");
+            }
         }
     }
 }

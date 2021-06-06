@@ -12,34 +12,18 @@ namespace Ecommerce
     public partial class WebForm1 : System.Web.UI.Page
     {
         public List<Product> lista;
+        public ProductBusiness prodBuis = new ProductBusiness();
+
+        public void setLista()
+        {
+            lista = prodBuis.listProducts();
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ProductBusiness business = new ProductBusiness();
-            try
-            {
-                lista = business.listProducts();
-            }
-            catch (Exception ex)
-            {
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx"); // Falta crearla
-            }
+            setLista();
+            Session.Add("fullList", lista);
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            ProductBusiness business = new ProductBusiness();
-            try
-            {
-                lista = business.listProducts();
-                // Acá esto tiene que agregar el producto con su información al grid view
-            }
-            catch (Exception ex)
-            {
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx"); // Falta crearla
-            }
-        }
     }
 }

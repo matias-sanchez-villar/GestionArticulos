@@ -65,15 +65,16 @@
                <%
                    for(int i = 0; i<6; i++)
                    { %>
-                   <div class="card" style="width: 18rem; height:450px;" data-id="<% = lista[i].ID %>">
-                      <img src="<% = lista[i].URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
-                      <div class="card-body">
-                        <h5 class="card-title"><% = lista[i].Name %></h5>
-                        <p class="card-text"><% = lista[i].Description %></p>
-                        <h6 style="text-align:center;"> $<% = lista[i].Price.ToString().TrimEnd(new char[] { '0' } ).Replace(',', ' ') %></h6>
-                        <asp:Button ID="Button1" data-bs-toggle="modal" data-bs-target="#toopenmodal" class="btn btn-primary" runat="server" Text="Add to cart"/>
-                      </div>
-                   </div>
+                   <div class="card" style="width: 18rem; height:500px; text-align:center; ">
+                    <img src="<% = lista[i].URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
+                <div class="card-body">
+                    <h5 class="card-title"><% = lista[i].Name %></h5>
+                    <p class="card-text" style=" text-align:left;"><% = lista[i].Description %></p>
+                    <h6 style="text-align:center;"> $<% = lista[i].Price %></h6>
+                    <a href="Cart.aspx?id=<% = lista[i].ID %>" class="btn"> Add to cart </a>
+                    <a href="Detalle.aspx?id=<% = lista[i].ID %>" class="btn"> Info </a>
+                </div>
+            </div>
                 <% } %>
         </div>
     </div>
