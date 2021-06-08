@@ -55,13 +55,6 @@
 
     <%--Aca tenemos la cantidad del carrito--%>
 
-    <div style="font-size: 40px; padding: 30px;">
-        <% = Cantidad %>
-    </div>
-
-
-
-
     <div class="container-fluid">
 
         <div class="row row-to-center p-5 m-5" style="gap: 30px;">

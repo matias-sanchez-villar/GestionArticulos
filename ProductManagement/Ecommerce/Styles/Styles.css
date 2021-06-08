@@ -17,6 +17,10 @@ body {
     color: var(--third-color);
 }
 
+.btn {
+    font-weight: 600;
+}
+
 .navbar {
     background-color: var(--main-color);
     padding: 10px;
@@ -31,11 +35,15 @@ body {
     color: #e2f3f5 ;
 }
 
+.nav-item a{
+    font-weight: 600;
+}
+
 .logo-container {
     height: 60px;
     width: 60px;
     border-radius: 100px;
-    background-color: var(--third-color) ;
+    background-color: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,24 +82,28 @@ body {
     color: var(--secondary-color);
 }
 
-.whole-container{
+.whole-container {
     width: 100%;
     height: auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    padding-top: 50px;
 }
 
-    .whole-container .cart-item-container {
-        width: 90%;
-        background-color: var(--main-color);
-        display: flex;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px rgba(#f5f7fa, 0.1);
-    }
+.whole-container .cart-item-container {
+    width: 90%;
+    background-color: var(--third-color);
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px var(--main-color);
+    max-width: 800px;
+    color: var(--main-color);
+    height: 120px;
+}
 
 .whole-container .cart-item-container .cart-item-data{
     width: 80%;
@@ -116,3 +128,11 @@ body {
     height: 40px;
     font-weight: bolder;
 }
+
+.checkout-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+

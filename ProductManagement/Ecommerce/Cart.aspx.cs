@@ -14,6 +14,8 @@ namespace Ecommerce
         public List<Carrito> cartlist;
         public List<Product> list;
         public int total = 0;
+        public float precioTotal = 0;
+        public int cantidadProductos;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -62,9 +64,18 @@ namespace Ecommerce
                 foreach (Carrito item in cartlist)
                 {
                     total += item.Quantity;
+                    precioTotal += (float)(item.Quantity * item.Product.Price);
                 }
                 Session.Add("Total", total);
                 Response.Redirect("Cart.aspx");
+                if (Session["Cantidad"] != null)
+                {
+                    cantidadProductos = (int)Session["Cantidad"];
+                }
+                else
+                {
+                    cantidadProductos = 0;
+                }
             }
         }
     }
