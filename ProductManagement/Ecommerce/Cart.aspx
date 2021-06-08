@@ -24,12 +24,8 @@
         </div>
 
         <div class="totals-container">
-            <h3>Total products in your cart: <% = cantidadProductos %></h3>
-            <h3>Total price: <% = precioTotal %></h3>
-        </div>
-
-        <div class="checkout-container">
-            <asp:Button CssClass="checkout-btn btn" ID="checkout" runat="server" Text="Button" />
+            <h3>Total products in your cart: <% = TotalProductos %></h3>
+            <h3>Total price: <% = PrecioTotal %></h3>
         </div>
 
 </asp:Content>

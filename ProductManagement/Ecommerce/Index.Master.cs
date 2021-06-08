@@ -9,18 +9,17 @@ namespace Ecommerce
 {
     public partial class Index : System.Web.UI.MasterPage
     {
-        public int Cantidad;
+        public static int CantidadProductos;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Total"] != null)
             {
-                Cantidad = (int)Session["Total"];
-                Session.Add("Cantidad", Cantidad);
+                CantidadProductos = (int)Session["Total"];
             }
             else
             {
-                Cantidad = 0;
+                CantidadProductos = 0;
             }
         }
     }
