@@ -14,10 +14,12 @@ namespace Ecommerce
         public List<Carrito> cartlist;
         public List<Product> list;
         public int TotalProductos { get; set; }
-        public float PrecioTotal { get; set; }
+        public decimal PrecioTotal { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            TotalProductos = 0;
+            PrecioTotal = 0;
             list = (List<Product>)Session["fullList"];
 
             if (Session["Cart"] == null)
@@ -63,7 +65,7 @@ namespace Ecommerce
                 foreach (Carrito item in cartlist)
                 {
                     TotalProductos += item.Quantity;
-                    PrecioTotal += (float)(item.Quantity * item.Product.Price);
+                    PrecioTotal += (decimal)(item.Quantity * item.Product.Price);
                 }
                 Session.Add("Total", TotalProductos);
 

@@ -40,7 +40,7 @@
                   <a class="nav-link" href="Cart.aspx">Cart</a>
                 </li>
                 <li class="nav-item">
-                     <a class="nav-link" href="Cart.aspx">Cantidad <% = CantidadProductos %></a>
+                     <a class="nav-link" href="Cart.aspx"><i class="fas fa-shopping-cart" style="padding:3px;"></i> <% = CantidadProductos %></a>
                 </li>
               </ul>
 

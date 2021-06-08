@@ -2,18 +2,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container-fluid">
-            <div class="card" style="width: 18rem; height:500px; text-align:center; ">
-                    <img src="<% = prodAux.URLimage %>" class="card-img-top" alt="product-image" style="height: 60%; object-fit:contain;">
-                <div class="card-body">
-                    <h5 class="card-title"><% = prodAux.Name %></h5>
-                    <p class="card-text" style=" text-align:left;"><% = prodAux.Description %></p>
-                    <h6 style="text-align:center;"> $<% = prodAux.Price %></h6>
-                    <a href="Cart.aspx?id=<% = prodAux.ID %>" class="btn"> Add to cart </a>
-                </div>
-            </div>
+    
+<div class="row mt-5 align-items-center" style=" height:500px; text-align:center; ">
+    <div class="col-md-6">
+        <div class="row justify-content-center">
+            <img
+                class="img-fluid mx-auto d-block"
+                src="<% = prodAux.URLimage %>"
+                alt="" style="height:400px; width:400px; margin:0;"/>
+        </div>
     </div>
+    <div class="col-md-6">
+        <h1 class="pb-4 text-left"><% = prodAux.Name %></h1>
+        <p class="py-3 text-left">
+            <% = prodAux.Description %>
+        </p>
+        <h4 class="h3 text-left"><% = prodAux.Price %></h4>
+        <a href="Cart.aspx?id=<% = prodAux.ID %>" class="btn btn-primary btn-lg mt-4">Add to cart</a>
+    </div>
+</div>
 
 
 </asp:Content>
