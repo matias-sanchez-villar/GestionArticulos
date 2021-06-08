@@ -13,6 +13,7 @@ namespace Ecommerce
     {
         public List<Product> lista;
         public ProductBusiness prodBuis = new ProductBusiness();
+        public int Cantidad;
 
         public void setLista()
         {
@@ -23,6 +24,14 @@ namespace Ecommerce
         {
             setLista();
             Session.Add("fullList", lista);
+            if (Session["Total"] != null)
+            {
+                Cantidad = (int)Session["Total"];
+            }
+            else
+            {
+                Cantidad = 0;
+            }
         }
 
     }

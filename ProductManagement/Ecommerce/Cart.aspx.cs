@@ -13,6 +13,7 @@ namespace Ecommerce
     {
         public List<Carrito> cartlist;
         public List<Product> list;
+        public int total = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -58,6 +59,11 @@ namespace Ecommerce
                     }
                     Session.Add("Cart", cartlist);
                 }
+                foreach (Carrito item in cartlist)
+                {
+                    total += item.Quantity;
+                }
+                Session.Add("Total", total);
                 Response.Redirect("Cart.aspx");
             }
         }
